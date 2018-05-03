@@ -18,8 +18,8 @@ contract ConfirmReceive is Constructor{
 
         // NOTE: This actually allows both the buyer and the seller to
         // block the refund - the withdraw pattern should be used.
-
-        buyer.transfer(penaltyRate*price/100);
-        seller.transfer(this.balance);
+        seller.transfer(price);
+        seller.transfer(sellerPenalty);
+        buyer.transfer(buyerPenalty);
     }
 }

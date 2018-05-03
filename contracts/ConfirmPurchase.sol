@@ -27,6 +27,7 @@ contract ConfirmPurchase is Constructor {
         inState('ConfirmPurchase')
         condition(msg.value == price + price*penaltyRate/100)
     {
+        buyerPenalty = price*penaltyRate/100;
         nextState();
     }
 

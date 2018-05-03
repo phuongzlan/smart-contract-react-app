@@ -6,7 +6,9 @@ contract Constructor is States{
     address public oracle;
     uint256 public price;
     uint256 public penaltyRate;
-    uint256 public state;
+    uint256 buyerPenalty;
+    uint256 sellerPenalty;
+    uint256 state;
     uint256 public value;
     function initData(
         address _seller, 
@@ -54,6 +56,7 @@ contract Constructor is States{
        return keccak256(a) == keccak256(b);
    }
     function getState() public view returns (string){
+        if (state >= states.length) return 'Done';
         return states[state];
     }
     
@@ -61,7 +64,7 @@ contract Constructor is States{
         state++;
     }
     function endState() internal{
-        state = states.length - 1;
+        state = states.length;
     }
     
     function contractBalance() public view returns(uint){

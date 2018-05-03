@@ -13,7 +13,7 @@ const styles = {
 
 const ListExampleSettings = ({iconModelsData, handleCheck}) => {
   return (
-  <div style={styles.root}>
+  <div >
       <List>
         {
           iconModelsData.map((item, index) => (
@@ -25,6 +25,7 @@ const ListExampleSettings = ({iconModelsData, handleCheck}) => {
                 />}
               primaryText={item.title}
               secondaryText={item.description}
+              secondaryTextLines={2}
             />
           ))
         }
