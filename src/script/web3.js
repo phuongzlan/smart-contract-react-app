@@ -1,6 +1,6 @@
 const Web3 = require('web3');
 
-let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:9545"));
+let web3 = new Web3(new Web3.providers.HttpProvider("http://chattkn.com:9545"));
 
 const API = require('../api');
 
