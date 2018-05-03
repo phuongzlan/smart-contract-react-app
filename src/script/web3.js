@@ -1,6 +1,9 @@
 const Web3 = require('web3');
+//const ganache = require("ganache-cli");
 
-let web3 = new Web3(new Web3.providers.HttpProvider("http://chattkn.com:9545"));
+let web3 = new Web3(new Web3.providers.HttpProvider("http://chattkn.com:8545"));
+//let web3 = new Web3();
+//web3.setProvider(ganache.provider());
 
 const API = require('../api');
 

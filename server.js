@@ -40,4 +40,10 @@ app.use((err, req, res, next) => {
   res.json(err.message);
 });
 
+var ganache = require("ganache-cli");
+var server = ganache.server();
+server.listen(8545, function(err, blockchain) {
+  console.log(blockchain);
+});
+
 app.listen(config.port);
